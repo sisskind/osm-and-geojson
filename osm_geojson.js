@@ -275,11 +275,11 @@ osm_geojson.osm2geojson = function(osm, metaProperties) {
         }
 
         if (metaProperties) {
-            setIf(element, 'id', props, 'osm_id');
-            setIf(element, 'user', props, 'osm_lastEditor');
-            setIf(element, 'version', props, 'osm_version', true);
-            setIf(element, 'changeset', props, 'osm_lastChangeset', true);
-            setIf(element, 'timestamp', props, 'osm_lastEdited');
+            setIf(element, 'id', props, '@id');
+            setIf(element, 'user', props, '@user');
+            setIf(element, 'version', props, '@version', true);
+            setIf(element, 'changeset', props, '@changeset', true);
+            setIf(element, 'timestamp', props, '@timestamp');
         }
 
         return sortObject(props);

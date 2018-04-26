@@ -5,7 +5,7 @@
     <script type="text/javascript">
         function toGeo() {
             var xml = document.getElementById('osmxml').value,
-                geojson = osm_geojson.osm2geojson(xml);
+                geojson = osm_geojson.osm2geojson(xml, true);
             document.getElementById('geojson').value = JSON.stringify(geojson);
             console.log(geojson);
         }
